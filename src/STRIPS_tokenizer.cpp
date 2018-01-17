@@ -8,11 +8,14 @@
  * 5. prints the strings in the member variable vector<string> tokenized_STRIPS
  */
 STRIPS_tokenizer::STRIPS_tokenizer() : cppstring_fullText(""){
+	cout << endl;
+    cout << "STRIPS tokenizer class\n";
+    cout << ">>>>>>>>>>>>>>>>>>>>>>\n";
 //    cstring_fullText = nullptr;
     askForFileNameAndExtractTextFromFile();
     tokenize(); //overloaded version which loads string saved in
     // the member variable cppstring_fullText
-    print_Vector_of_strg();
+    //print_Vector_of_strg();
     tokenized_STRIPS.shrink_to_fit(); //shrinks to size
 };
 
@@ -24,13 +27,16 @@ STRIPS_tokenizer::STRIPS_tokenizer() : cppstring_fullText(""){
  * 4. prints the strings in the member variable vector<string> tokenized_STRIPS
  */
 STRIPS_tokenizer::STRIPS_tokenizer(const string &fileName)  : cppstring_fullText(""){
+	cout << endl;
+    cout << "STRIPS tokenizer class\n";
+    cout << ">>>>>>>>>>>>>>>>>>>>>>\n";
 //    cstring_fullText = nullptr;
     saveFileToString(fileName);
 
     tokenize(); //overloaded version which loads string saved in
     // the member variable cppstring_fullText
     tokenized_STRIPS.shrink_to_fit(); //shrinks to size
-    print_Vector_of_strg();
+    //print_Vector_of_strg();
 }
 
 /* Destructor
@@ -47,8 +53,6 @@ STRIPS_tokenizer::~STRIPS_tokenizer(){
  * prints retrieved texts
  */
 void STRIPS_tokenizer::askForFileNameAndExtractTextFromFile(){
-	cout << endl;
-    cout << "STRIPS tokenizer\n";
     cout << "Enter STRIPS planner text's file name:\n";
     string fileName = "";
     getline(cin,fileName);
@@ -93,6 +97,7 @@ void STRIPS_tokenizer::tokenize(const string &s) {
     vector<string> tokens;
     char dummy; //for saving individual chars from string
     uint32_t string_size = s.size();
+
     for (uint32_t i = 0; i < string_size; ++i) {
 
     	dummy = s[i]; // when push_back is used later on in this function,
@@ -124,6 +129,7 @@ void STRIPS_tokenizer::tokenize(const string &s) {
     tokenized_STRIPS = tokens;
 }
 
+
 /* ::tokenize()
  * overloaded version of the previous function
  * calls the previous function with this object's
@@ -133,6 +139,9 @@ void STRIPS_tokenizer::tokenize() {
 	tokenize(cppstring_fullText);
 }
 
+/////////////////////////////// BOOLEAN	helper functions /////////////////////////////////
+/*
+ */
 bool STRIPS_tokenizer::isSpecialToken(const char &special) {
     switch (special){
         case ':':
@@ -191,13 +200,6 @@ void STRIPS_tokenizer::load_preset_STRIPS_planner_fullText(){
 	set_cppstring_fullText(full_STRIPS_planner_ext);
 }
 
-/*
- * to be added later
- */
-// char * STRIPS_tokenizer::getCstring_fullText_(){
-//     return this->cstring_fullText;
-// }
-
 /* ::getVectStrg_Tokenized_STRIPS()
  * returns vector of strings with STRIPS planner tokens
  */
@@ -248,3 +250,10 @@ void STRIPS_tokenizer::print_Vector_of_strg(const vector<string> &vectStr) //pri
         cout << ">" << vectStr[i] << "<\n";
     }
 }
+
+/*
+ * to be added later
+ */
+// char * STRIPS_tokenizer::getCstring_fullText_(){
+//     return this->cstring_fullText;
+// }

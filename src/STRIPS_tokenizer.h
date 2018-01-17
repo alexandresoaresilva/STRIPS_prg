@@ -87,8 +87,8 @@ public:
 	void print_cppstring_fullText();//prints from vector saved within the object
 	void print_Vector_of_strg();//prints from the object's vector
 	void print_Vector_of_strg(const vector<string> &vectStr); //prints strings from argument vector
-
 	//char * getCstring_fullText_();
+
 private:
 	string cppstring_fullText; //STRIPS text from file saved here (no changes yet)
 	vector<string> tokenized_STRIPS; //where tokens are saved for parsing
@@ -98,8 +98,6 @@ private:
 	void tokenize();
 	void tokenize(const string &s);
 	void saveNewTokenIntoTokensVec(string &token, vector<string> &tokens); //helper for the tokenize function
-
-
 	void skipComment(const string &s, uint32_t &position);
 	void skipWhiteSpace(const string &s, uint32_t &position);
 	bool isSpecialToken(const char &special); //boolean test
@@ -107,9 +105,7 @@ private:
 	bool hasCommentBegun(const char &commentBeginning);
 
 	//char * cstring_fullText; //c-string holding the new text
-
-								 //string * tokenized_STRIPS_ptr;
-
+	 //string * tokenized_STRIPS_ptr;
 };
 
 #endif /* tokenizer_h */
