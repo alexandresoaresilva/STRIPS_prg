@@ -2,8 +2,8 @@
 This personal project is based on assignment for the 2017 spring data structures class at Texas Tech University, taught by Dr. Rushton (CS dept).
 
 Written by: Alexandre Soares
-Date: 28 December 2017 - by this date, it has the tokenizer and STRIPS recognizer using recursive descent. 
-Parser, tree-builder, depth-first search will be there in the near future (next break from school!).
+Tree-builder, depth-first search will be there in the near future (next break from school!).
+
  
 **Description:** 
 This code tokenizes a STRIPS planner such as
