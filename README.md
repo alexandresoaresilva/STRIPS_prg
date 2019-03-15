@@ -2,6 +2,7 @@
 This personal project is based on assignment for the 2017 spring data structures class at Texas Tech University, taught by Dr. Rushton (CS dept).
 
 Written by: Alexandre Soares
+
 Tree-builder, depth-first search will be there in the near future (next break from school!).
 
  
