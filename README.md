@@ -3,7 +3,7 @@ This personal project is based on assignment for the 2017 spring data structures
 
 Written by: Alexandre Soares
 
-Tree-builder, depth-first search will be there in the near future (next break from school!).
+Tree-builder, depth-first search still missing.
 
  
 **Description:** 
