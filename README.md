@@ -3,7 +3,7 @@ This personal project is based on assignment for the 2017 spring data structures
 
 Written by: Alexandre Soares
 
-Tree-builder, depth-first search still missing.
+Tree of possible actions builder and depth-first search still missing.
 
  
 **Description:** 
